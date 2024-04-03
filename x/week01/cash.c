@@ -10,7 +10,10 @@ int coinCounter(int amount);
 
 int main(void)
 {
-    int totalMoney = get_int("How much change is owed (in cents): ");
+    do
+    {
+        int totalMoney = get_int("How much change is owed (in cents): ");
+    }while(totalMoney < 0);
     int coinReturn = coinCounter(totalMoney);
     printf("\nCoins: %i\n", coinReturn);
 
